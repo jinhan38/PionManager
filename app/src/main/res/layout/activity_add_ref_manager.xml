@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".Menu.MyInfo.AddRefManager">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big"
+        android:orientation="horizontal"
+        android:background="@color/basic_background"
+        android:weightSum="100">
+
+        <ImageButton
+            android:id="@+id/ibtn_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="13"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/arrow_left_black" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="60"
+            android:background="@color/basic_background"
+            android:gravity="center|left"
+            android:text="추천인 등록"
+            android:textSize="@dimen/font_big" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/font_big"
+                android:gravity="center|left"
+                android:paddingStart="20dp"
+                android:text="@string/add_ref_manager_coment"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="13"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <EditText
+                android:id="@+id/et_add_ref_manager"
+                style="@style/EditTheme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center|left"
+                android:hint="e-mail 형식 ID"
+                android:inputType="textEmailAddress"
+                android:maxLength="25"
+                android:singleLine="true"
+                android:textSize="@dimen/font_big"
+                tools:ignore="NestedWeights,RtlHardcoded,TextFields" />
+
+            <TextView
+                android:id="@+id/tv_add_ref_manager_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:singleLine="true"
+                android:text="추천인 아이디를 확인해주세요"
+                android:textColor="@color/my_red"
+                android:textSize="@dimen/font_big"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_big"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_add_ref_manager"
+                style="@style/btn_big"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/back_gray_round"
+                android:text="확인"
+                android:textColor="@color/basic_gray"
+                android:textSize="@dimen/font_big" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

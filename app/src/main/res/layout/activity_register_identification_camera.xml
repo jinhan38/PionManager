@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration.GalleryCamera">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_big"
+            android:background="@drawable/back_blue_round"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/font_big"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingVertical="10dp"
+                android:paddingLeft="15dp"
+                android:text="@string/register_registration_num_1"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/font_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="@string/register_identification_2"
+                android:textSize="@dimen/font_title_xx" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:paddingLeft="20dp"
+            android:textSize="@dimen/font_default"
+            android:text="※ 매니저 수당을 받을 때 원천징수 용도로 사용됩니다."
+            tools:ignore="HardcodedText" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:breakStrategy="balanced"
+                android:inputType="textMultiLine"
+                android:lineSpacingExtra="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="@string/register_identification_3"
+                android:textSize="@dimen/font_default" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_camera_identification"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="@drawable/text_line_4"
+                    android:scaleType="fitCenter" />
+
+                <LinearLayout
+                    android:id="@+id/ll_camera_gallery_wrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btn_gallery"
+                        style="@style/btn_default"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_image_black_24dp"
+                        android:textColor="@color/white" />
+
+                    <ImageButton
+                        android:id="@+id/btn_camera"
+                        style="@style/btn_default"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_camera_alt_black_24dp"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_rotate_wrap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/rotate_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/rotate_left"
+                        app:layout_constraintEnd_toStartOf="@+id/rotate_right"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/rotate_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/rotate_right"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_delete"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/rotate_left"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+
+                <ImageButton
+                    android:id="@+id/btn_delete"
+                    style="@style/btn_default"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="20dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/delete_bin"
+                    android:textColor="@color/white"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_big"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/back_blue_round"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="@style/progressBar" />
+
+                    <Button
+                        android:id="@+id/btn_identification_moveToBank"
+                        style="@style/btn_big"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_big"
+                        android:background="@drawable/back_blue_round"
+                        android:text="@string/next"
+                        android:textColor="@color/white" />
+
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_capture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <SurfaceView
+                    android:id="@+id/surfaceView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:background="#80000000"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/ll_capture_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3.4"
+                    android:background="@drawable/border_white"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3.6"
+                    android:background="#80000000"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/camera_crop"
+                        android:textColor="#fff" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_capture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="30dp"
+                android:text="@string/camera_capture" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+</FrameLayout>

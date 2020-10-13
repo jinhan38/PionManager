@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pion_basic_soft_blue"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".PionIntroduce.Introduce_Frag_1">
+
+    <TextView
+        android:id="@+id/introduce_frag_3_top"
+        style="@style/font_title_xx"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:textStyle="bold"
+        android:breakStrategy="balanced"
+        android:gravity="bottom|left"
+        android:inputType="textMultiLine"
+        android:paddingLeft="30dp"
+        android:paddingBottom="40dp"
+        android:text="@string/introduce_frag_3_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/introduce_frag_3_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:src="@drawable/introduce_3" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/introduce_frag_3_bottom"
+        style="@style/font_title"
+        android:textColor="@color/white"
+        android:textStyle="normal"
+        android:layout_width="match_parent"
+        android:paddingTop="20dp"
+        android:layout_height="0dp"
+        android:layout_weight="25"
+        android:breakStrategy="balanced"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:paddingHorizontal="30dp"
+        android:text="@string/introduce_frag_3_bottom" />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:orientation="vertical"
+        android:paddingHorizontal="30dp">
+
+        <Button
+            android:id="@+id/introduce_frag_3_next"
+            style="@style/btn_big"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_big"
+            android:background="@drawable/btn_border_w"
+            android:textColor="@color/white"
+            android:elevation="300dp"
+            android:text="시작하기"
+            android:textSize="@dimen/font_title_xx" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Menu.Setting.ServiceRule">
+
+    <LinearLayout
+        android:id="@+id/ll_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <ImageButton
+            android:id="@+id/ibtn_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="13"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="TODO"
+            android:src="@drawable/arrow_left_black" />
+
+        <TextView
+            android:id="@+id/tv_top"
+            style="@style/font_big"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="80"
+            android:gravity="center|left"
+            android:text="더파이온 약관"
+            tools:ignore="RtlHardcoded" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#D9808080" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_show_rule_contents"
+                style="@style/font_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:paddingTop="15dp"
+                android:text="@string/service_rule" />
+
+            <TextView
+                android:id="@+id/tv_show_rule_contents_2"
+                style="@style/font_default"
+                android:text="@string/service_rule_2"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="4dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

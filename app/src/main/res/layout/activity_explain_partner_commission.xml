@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/text_line"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme.NoActionBar">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/preferences_left_pane_weight"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/back_blue_round" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/info_icon_gray"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:paddingVertical="15dp"
+
+                android:paddingLeft="10dp"
+                android:text="비즈파트너 지급 수당"
+                android:textColor="@color/basic_gray"
+                android:textSize="@dimen/font_title_x" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/drop_shadow" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="*이번달 비즈파트너 지급수당 계산"
+                android:textAlignment="center"
+                android:textSize="@dimen/font_big" />
+
+            <TextView
+                android:id="@+id/AorB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="① 이번달 총 대출 완료금액 : "
+                android:textSize="@dimen/font_default" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="① 이번달 총 대출 완료금액 : "
+                android:textSize="@dimen/font_default" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="② 매니저 수당 : ① x "
+                android:textSize="@dimen/font_default"
+                app:layout_constraintStart_toStartOf="@+id/text_2"
+                app:layout_constraintTop_toBottomOf="@+id/text_2" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="③ 플랫폼수수료 : ② x 0.6% = "
+                android:textSize="@dimen/font_default"
+                app:layout_constraintStart_toStartOf="@+id/text_3"
+                app:layout_constraintTop_toBottomOf="@+id/text_3" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="③ 플랫폼수수료 : ② x 0.6% = "
+                android:textSize="@dimen/font_default"
+                app:layout_constraintStart_toStartOf="@+id/text_3"
+                app:layout_constraintTop_toBottomOf="@+id/text_3" />
+
+            <TextView
+                android:id="@+id/sumPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="※ 실 지급수당 : ① - ② = "
+                android:textColor="@color/pion_basic_soft_blue"
+                android:textSize="@dimen/font_default" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="※ 실 지급수당 : ① - ② = "
+                android:textSize="@dimen/font_default" />
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="※ 실 지급수당 : ① - ② = "
+                android:textSize="@dimen/font_default" />
+
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="※ 실 지급수당 : ① - ② = "
+                android:textSize="@dimen/font_default" />
+
+            <TextView
+                android:id="@+id/text8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="※ 실 지급수당 : ① - ② = "
+                android:textSize="@dimen/font_default" />
+
+            <TextView
+                android:id="@+id/sumPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="※ 실 지급수당 : ① - ② = "
+                android:textColor="@color/pion_basic_soft_blue"
+                android:textSize="@dimen/font_default" />
+
+            <TextView
+                android:id="@+id/incentivePay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="※ 실 지급수당 : ① - ② = "
+                android:textColor="@color/pion_basic_soft_blue"
+                android:textSize="@dimen/font_default" />
+
+            <TextView
+                android:id="@+id/platCommission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="※ 실 지급수당 : ① - ② = "
+                android:textColor="@color/my_red_light"
+                android:textSize="@dimen/font_default" />
+
+            <TextView
+                android:id="@+id/finalPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:bufferType="spannable"
+                android:text="※ 실 지급수당 : ① - ② = "
+                android:textColor="@color/pion_basic_soft_blue"
+                android:textSize="@dimen/font_title" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:background="@drawable/btn_selector_blue"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="확인"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_title_x"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

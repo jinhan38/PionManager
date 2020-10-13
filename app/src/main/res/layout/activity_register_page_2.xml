@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView_top_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration.RegisterPage_2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="80dp"
+            android:letterSpacing="0.05"
+            android:text="@string/com_name"
+            android:textColor="@color/pion_basic_soft_blue"
+            android:textSize="55dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="금융을 쇼핑하다"
+            android:textColor="@color/pion_basic_soft_blue"
+            android:textSize="15dp" />
+
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="80dp"-->
+<!--            android:layout_marginBottom="50dp"-->
+<!--            android:src="@drawable/icon_login" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="40dp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_id_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_default"
+                        android:background="@drawable/text_line"
+                        android:gravity="center|left"
+                        android:hint="@string/id"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="50"
+                        android:padding="7dp"
+                        android:singleLine="true"
+                        android:textColor="@color/basic_gray"
+                        android:textSize="@dimen/font_default"
+                        tools:ignore="SpUsage" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_err_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/error_text_id"
+                    android:textColor="@color/my_red"
+                    android:textSize="13dp"
+                    android:paddingLeft="7dp"
+                    android:layout_marginTop="3dp"
+                    tools:visibility="visible"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="11dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_pw_register"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_default"
+                                android:layout_gravity="center"
+                                android:background="@drawable/text_line"
+                                android:gravity="center|left"
+                                android:hint="@string/password"
+                                android:inputType="textPassword"
+                                android:padding="7dp"
+                                android:textSize="@dimen/font_default" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2" />
+
+                        <Button
+                            android:id="@+id/bt_pw_confirm_register"
+                            style="@style/button_font_small"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/height_default"
+                            android:layout_gravity="center|bottom"
+                            android:layout_weight="1.8"
+                            android:background="@drawable/btn_selector_blue"
+                            android:text="@string/password_confirm"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_err_pw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/error_text_pw"
+                    android:textColor="@color/my_red"
+                    android:textSize="@dimen/font_default"
+                    android:paddingLeft="7dp"
+                    android:layout_marginTop="3dp"
+                    tools:visibility="visible"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_recommendation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/refmanager_text_contents"
+                    android:textSize="@dimen/font_default" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_recommendation"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_default"
+                            android:layout_gravity="center"
+                            android:background="@drawable/text_line"
+                            android:gravity="center|left"
+                            android:hint="@string/recommendation"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="50"
+                            android:padding="7dp"
+                            android:textSize="@dimen/font_default" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2" />
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_default"
+                        android:layout_gravity="center|bottom"
+                        android:layout_weight="1.8"
+                        android:background="@drawable/back_blue_round_all">
+
+                        <ProgressBar
+                            android:id="@+id/confirm_progressBar"
+                            style="@style/progressBar"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp" />
+
+
+                        <Button
+                            android:id="@+id/bt_ref_manager_confirm"
+                            style="@style/button_font_small"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_default"
+                            android:background="@drawable/btn_selector_blue"
+                            android:text="확인"
+                            android:textColor="@color/white" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_err_recommendation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/error_text_recommendation"
+                        android:textColor="@color/my_red"
+                        android:textSize="@dimen/font_default"
+                        android:paddingLeft="7dp"
+                        android:layout_marginTop="3dp"
+                        tools:visibility="visible"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_err_recommendation_noID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/error_text_recommendation_noID"
+                        android:textColor="@color/my_red"
+                        android:paddingLeft="7dp"
+                        android:layout_marginTop="3dp"
+                        tools:visibility="visible"
+                        android:textSize="@dimen/font_default"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_big"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/back_blue_round_all">
+
+                    <ProgressBar
+                        android:id="@id/progressBar"
+                        style="@style/progressBar" />
+
+                    <Button
+                        android:id="@+id/bt_confirm_register"
+                        style="@style/btn_big"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="top"
+                        android:background="@drawable/btn_selector_blue"
+                        android:elevation="50dp"
+                        android:text="@string/register_next"
+                        android:textColor="@android:color/white" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+

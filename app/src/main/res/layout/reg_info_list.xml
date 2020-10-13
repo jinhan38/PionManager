@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_listView"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#70808080" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/button_ripple_effect"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:weightSum="100">
+
+            <ImageView
+                android:id="@+id/iv_status_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="17dp" />
+
+
+            <TextView
+                android:id="@+id/tv_listView_reg_name"
+                style="@style/font_big"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="25"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="홍길동" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/tv_hope"
+                    style="@style/font_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|right"
+                    android:text="희망대출금" />
+
+                <TextView
+                    android:id="@+id/tv_hope_loan_price"
+                    style="@style/font_big"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|right"
+                    android:textColor="@color/pion_basic_soft_blue"
+                    android:text="1,000만원" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="35"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingRight="20dp"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    style="@style/font_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|right"
+                    android:text="@string/status_3_document_submit" />
+
+                <TextView
+                    android:id="@+id/tv_auctionCompleteDate_date"
+                    style="@style/font_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|right"
+                    android:text="마감 1일전"
+                    android:textColor="@android:color/holo_red_dark" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

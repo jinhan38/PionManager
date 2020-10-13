@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/basic_background">
+
+            <TextView
+                android:id="@+id/tvTopManagerPay"
+                style="@style/font_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="비즈매니저 수당"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/text_line_black"
+                android:paddingVertical="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTopManagerPay">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_big"
+                    android:paddingBottom="5dp"
+                    android:weightSum="8">
+
+                    <TextView
+                        style="@style/font_big"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:text="@string/A"
+                        android:textColor="@color/pion_basic_soft_blue" />
+
+                    <TextView
+                        style="@style/font_big"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:text="@string/B"
+                        android:textColor="@color/btn_big_orange" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_big"
+                    android:paddingVertical="5dp"
+                    android:weightSum="8">
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/A2"/>
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/A1"/>
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/A2"/>
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/A1"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_big"
+                    android:paddingVertical="5dp"
+                    android:weightSum="8">
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="1.4%" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="0.9%" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="0.8%" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="0.5%" />
+
+                </TableRow>
+
+
+            </TableLayout>
+
+
+            <LinearLayout
+                android:id="@+id/payExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/table">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ex"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/pion_basic_soft_blue"
+                    style="@style/font_title_x"/>
+
+                <TextView
+                    android:id="@+id/tvTopExplain"
+                    style="@style/font_default"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="5dp"
+                    android:layout_height="wrap_content"
+                    android:breakStrategy="balanced"
+                    android:gravity="center|left"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:text="@string/biz_commision_explanation" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/payExplain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/payExample">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/teamMemberCircle" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:lineSpacingExtra="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="97"
+                        android:breakStrategy="balanced"
+                        android:inputType="textMultiLine"
+                        android:text="@string/manager_commission_explanation_1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/teamMemberCircle" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="97"
+                        android:breakStrategy="balanced"
+                        android:lineSpacingExtra="5dp"
+                        android:inputType="textMultiLine"
+                        android:text="@string/manager_commission_explanation_2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/teamMemberCircle" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="97"
+                        android:breakStrategy="balanced"
+                        android:lineSpacingExtra="5dp"
+                        android:inputType="textMultiLine"
+                        android:text="@string/manager_commission_explanation_3" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/dash_center"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                android:elevation="100dp"
+                android:src="@drawable/dash_line_blue"
+                app:layout_constraintTop_toBottomOf="@+id/payExplain" />
+
+            <TextView
+                android:id="@+id/tvBizManagerPay"
+                style="@style/font_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:text="비즈수당"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dash_center" />
+
+            <TableLayout
+                android:id="@+id/biz_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/text_line_black"
+                android:paddingVertical="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBizManagerPay">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_big"
+                    android:paddingBottom="5dp"
+                    android:weightSum="8">
+
+                    <TextView
+                        style="@style/font_big"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:text="아파트 주상복합"
+                        android:textColor="@color/pion_basic_soft_blue" />
+
+                    <TextView
+                        style="@style/font_big"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:text="아파트 주상복합 외"
+                        android:textColor="@color/pion_basic_soft_blue" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_big"
+                    android:paddingVertical="5dp"
+                    android:weightSum="8">
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="후순위" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="선순위" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="후순위" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="선순위" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/aaa"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_big"
+                    android:paddingVertical="5dp"
+                    android:weightSum="8">
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="0.2%" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="0.15%" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="0.1%" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="0.05%" />
+
+                </TableRow>
+
+
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/ex_biz_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/biz_table">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ex"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/pion_basic_soft_blue"
+                    style="@style/font_title_x"/>
+
+                <TextView
+                    android:id="@+id/tvMiddleExplain"
+                    style="@style/font_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:breakStrategy="balanced"
+                    android:gravity="center|left"
+                    android:lineSpacingExtra="5dp"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:text="@string/biz_pay" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingBottom="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/ex_biz_pay">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/teamMemberCircle" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="97"
+                        android:breakStrategy="balanced"
+                        android:lineSpacingExtra="5dp"
+                        android:inputType="textMultiLine"
+                        android:text="@string/biz_commission_explanation_0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/teamMemberCircle" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="97"
+                        android:lineSpacingExtra="5dp"
+                        android:breakStrategy="balanced"
+                        android:inputType="textMultiLine"
+                        android:text="@string/biz_commission_explanation_1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/teamMemberCircle" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="97"
+                        android:lineSpacingExtra="5dp"
+                        android:breakStrategy="balanced"
+                        android:inputType="textMultiLine"
+                        android:text="@string/biz_commission_explanation_2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/teamMemberCircle" />
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="97"
+                        android:lineSpacingExtra="5dp"
+                        android:breakStrategy="balanced"
+                        android:inputType="textMultiLine"
+                        android:text="@string/biz_commission_explanation_3" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

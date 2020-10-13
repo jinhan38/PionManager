@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Registration.RegisterPage_Bank_Account">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:background="@drawable/back_blue_round"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/font_big"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="10dp"
+                    android:paddingLeft="15dp"
+                    android:text="@string/register_registration_num_2"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/font_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="@string/register_page_bank_account_1"
+                    android:textSize="@dimen/font_title_xx" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spinner_bank"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp" />
+
+                <EditText
+                    android:id="@+id/et_account_number"
+                    style="@style/EditTheme"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/register_page_bank_account_number"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_big" />
+
+                <TextView
+                    android:id="@+id/tv_err_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:text="@string/error_text_account"
+                    android:textColor="@color/my_red"
+                    android:textSize="@dimen/font_big"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/et_bank_owner"
+                    style="@style/EditTheme"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/register_page_bank_account_name"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_big" />
+
+                <TextView
+                    android:id="@+id/tv_err_bank_owner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:text="@string/error_text_bank_owner"
+                    android:textColor="@color/my_red"
+                    android:textSize="@dimen/font_big"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_big"
+                    android:layout_marginHorizontal="40dp"
+                    android:background="@drawable/back_blue_round">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="@style/progressBar" />
+
+                    <Button
+                        android:id="@+id/btn_next_bank_account"
+                        style="@style/btn_big"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back_blue_round"
+                        android:text="@string/register_page_manager_number_application"
+                        android:textColor="@color/white" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

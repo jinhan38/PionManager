@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_logout_dialog_contents"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="15dp"
+    android:background="@drawable/text_line"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme.NoActionBar">
+
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="@integer/preferences_left_pane_weight"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/back_blue_round" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/info_icon_gray"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="입찰정보 안내"
+                android:textColor="@color/basic_gray"
+                android:textSize="@dimen/font_title_x" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/drop_shadow" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="85">
+
+            <TextView
+                android:id="@+id/text_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:breakStrategy="balanced"
+                android:inputType="textMultiLine"
+                android:text=" 금융사 입찰정보 리스트입니다."
+                android:textSize="@dimen/font_default"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                app:layout_constraintRight_toLeftOf="@+id/text_1"
+                app:layout_constraintTop_toTopOf="@+id/text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teamMemberCircle"/>
+
+            <TextView
+                android:id="@+id/text_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginTop="10dp"
+                android:breakStrategy="balanced"
+                android:inputType="textMultiLine"
+                android:text=" 입찰이되면 고객에게 문자가 발송되고, 고객은 직접 조건을 선택할 수 있습니다."
+                android:textSize="@dimen/font_default"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_1" />
+
+            <TextView
+                app:layout_constraintRight_toLeftOf="@+id/text_2"
+                app:layout_constraintTop_toTopOf="@+id/text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teamMemberCircle"/>
+
+            <TextView
+                android:id="@+id/text_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginTop="10dp"
+                android:breakStrategy="balanced"
+                android:inputType="textMultiLine"
+                android:text=" 낙찰된 조건에는 낙찰 표시가 생성됩니다."
+                android:textSize="@dimen/font_default"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_2" />
+
+            <TextView
+                app:layout_constraintRight_toLeftOf="@+id/text_3"
+                app:layout_constraintTop_toTopOf="@+id/text_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teamMemberCircle"/>
+
+            <TextView
+                android:id="@+id/text_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginTop="5dp"
+                android:breakStrategy="balanced"
+                android:inputType="textMultiLine"
+                android:text=" 대출이 완료된 후에도 낙찰 및 입찰리스트를 확인할 수 있습니다."
+                android:textSize="@dimen/font_default"
+                app:layout_constraintStart_toStartOf="@+id/text_3"
+                app:layout_constraintTop_toBottomOf="@+id/text_3" />
+
+            <TextView
+                app:layout_constraintRight_toLeftOf="@+id/text_4"
+                app:layout_constraintTop_toTopOf="@+id/text_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teamMemberCircle"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:background="@drawable/btn_selector_blue"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="확인"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_title_x"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_auction_detail_info_focus"
+                style="@style/font_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left"
+                android:paddingStart="10dp"
+                android:text="입찰정보"
+                tools:ignore="RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/ibtnexplain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="75dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="7dp"
+                android:src="@drawable/info_icon_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/tv_auction_detail_info_focus" />
+
+        </FrameLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#34808080" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_have_not_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical"
+                tools:visibility="gone">
+
+                <TextView
+                    style="@style/font_big"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="입찰 내역이 없습니다."
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_have_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:visibility="visible">
+
+                <!--RecyclerView가 ScrollView안에 있으면 스크롤할 때 끊긴다. 이때 nestedScrollingEnabled = false 설정을 주면 된다.-->
+                <!--nested가 중첩이라는 뜻이니까 중첩 스크롤을 false한 것이다.-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewAuctionHouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@android:color/transparent"
+                    android:nestedScrollingEnabled="false" />
+
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</layout>

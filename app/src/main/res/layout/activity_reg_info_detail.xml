@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegInfoDetail">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <ImageButton
+                android:id="@+id/ibtn_back"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:background="@drawable/btn_selector_white"
+                android:elevation="-10dp"
+                android:src="@drawable/arrow_left_black"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="60"
+                android:elevation="-10dp"
+                android:gravity="center|left"
+                android:text="물건정보"
+                android:textSize="@dimen/font_big"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:fillViewport="true"
+            android:scrollbarSize="5dp"
+            android:scrollbars="vertical">
+
+            <FrameLayout
+                android:id="@+id/fm_parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:elevation="100dp"
+                    android:indeterminateTint="@color/pion_basic_soft_blue" />
+
+                <LinearLayout
+                    android:id="@+id/ll_reg_detail_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/tv_reg_detail_info_focus"
+                            style="@style/font_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:paddingLeft="10dp"
+                            android:text="등록정보"
+                            android:textColor="@color/pion_basic_soft_blue" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#34808080" />
+
+                        <LinearLayout
+                            style="@style/setting_linearlayout"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/reg_detail_tv_left"
+                                android:layout_width="0dp"
+                                android:layout_weight="40"
+                                android:text="등록번호" />
+
+                            <TextView
+                                android:id="@+id/tv_reg_num"
+                                style="@style/reg_detail_tv_right"
+                                android:layout_width="0dp"
+                                android:layout_weight="60"
+                                android:text="No. 200319-00101" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="#8F808080" />
+
+                        <LinearLayout
+                            style="@style/setting_linearlayout"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/reg_detail_tv_left"
+                                android:layout_width="0dp"
+                                android:layout_weight="40"
+                                android:text="고객명" />
+
+                            <TextView
+                                android:id="@+id/tv_reg_member_name"
+                                style="@style/reg_detail_tv_right"
+                                android:layout_width="0dp"
+                                android:layout_weight="60"
+                                android:text="홍길동" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="#8F808080" />
+
+                        <LinearLayout
+                            style="@style/setting_linearlayout"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/reg_detail_tv_left"
+                                android:layout_width="0dp"
+                                android:layout_weight="40"
+                                android:text="등록일" />
+
+                            <TextView
+                                android:id="@+id/tv_reg_date"
+                                style="@style/reg_detail_tv_right"
+                                android:layout_width="0dp"
+                                android:layout_weight="60"
+                                android:text="2020-05-01" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="#8F808080" />
+
+
+                            <LinearLayout
+                                style="@style/setting_linearlayout"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/reg_detail_tv_left"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="40"
+                                    android:text="등록타입" />
+
+                                <LinearLayout
+                                    style="@style/reg_detail_tv_right"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="60"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_type_first"
+                                        android:layout_width="22dp"
+                                        android:layout_height="22dp"
+                                        android:background="@drawable/type_b"
+                                        android:gravity="center"
+                                        android:text="B"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/font_big" />
+
+                                    <TextView
+                                        android:id="@+id/tv_type_second"
+                                        android:layout_width="22dp"
+                                        android:layout_height="22dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:background="@drawable/type_secound"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/font_big" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="#8F808080" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                style="@style/setting_linearlayout"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/reg_detail_tv_left"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="40"
+                                    android:text="진행단계" />
+
+                                <TextView
+                                    android:id="@+id/tv_remaining_time"
+                                    style="@style/reg_detail_tv_right"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="60"
+                                    android:gravity="top|right"
+                                    android:text="마감2일전"
+                                    android:textColor="@color/my_red_light"
+                                    android:textSize="17dp"
+                                    android:textStyle="bold"
+                                    android:visibility="invisible"
+                                    tools:visibility="visible" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_canceled_reason"
+                                style="@style/setting_linearlayout"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingBottom="5dp"
+                                android:visibility="gone"
+                                tools:visibility="visible">
+
+                                <TextView
+                                    android:id="@+id/tv_canceled_reason"
+                                    style="@style/reg_detail_tv_right"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="top|right"
+                                    android:text="서류 미접수"
+                                    android:textColor="@color/my_red_light"
+                                    android:textSize="17dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_bidding_explain"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:gravity="center"
+                                tools:visibility="visible"
+                                android:layout_marginBottom="10dp"
+                                android:text="고객의 낙찰을 기다리는 중입니다."
+                                android:textSize="@dimen/font_default"
+                                android:visibility="gone" />
+
+                            <FrameLayout
+                                android:id="@+id/fl_status_wrap"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:paddingVertical="15dp">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="4dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginHorizontal="30dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:background="@color/soft_gray" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="15dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="120">
+
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:gravity="center">
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent">
+
+                                            <ImageView
+                                                android:id="@+id/iv_status_circle_bidding_out"
+                                                style="@style/status_circle_size"
+                                                android:scaleType="center"
+                                                android:src="@drawable/circle_status_out" />
+
+                                            <ImageView
+                                                android:id="@+id/iv_status_circle_bidding"
+                                                style="@style/status_circle_size"
+                                                android:scaleType="center"
+                                                android:src="@drawable/circle_status_in"
+                                                android:visibility="invisible" />
+
+                                        </FrameLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:gravity="center">
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent">
+
+                                            <ImageView
+                                                android:id="@+id/iv_status_select_auction_out"
+                                                style="@style/status_circle_size"
+                                                android:scaleType="center"
+                                                android:src="@drawable/circle_status_out" />
+
+                                            <ImageView
+                                                android:id="@+id/iv_status_circle_select_auction"
+                                                style="@style/status_circle_size"
+                                                android:scaleType="center"
+                                                android:src="@drawable/circle_status_in"
+                                                android:visibility="invisible" />
+
+                                        </FrameLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:gravity="center">
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent">
+
+                                            <ImageView
+                                                android:id="@+id/iv_status_receipt_paper_out"
+                                                style="@style/status_circle_size"
+                                                android:scaleType="center"
+                                                android:src="@drawable/circle_status_out" />
+
+                                            <ImageView
+                                                android:id="@+id/iv_status_circle_receipt_paper"
+                                                style="@style/status_circle_size"
+                                                android:scaleType="center"
+                                                android:src="@drawable/circle_status_in"
+                                                android:visibility="invisible" />
+
+                                        </FrameLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:gravity="center">
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent">
+
+                                            <ImageView
+                                                android:id="@+id/iv_status_check_paper_out"
+                                                style="@style/status_circle_size"
+                                                android:scaleType="center"
+                                                android:src="@drawable/circle_status_out" />
+
+                                            <ImageView
+                                                android:id="@+id/iv_status_circle_check_paper"
+                                                style="@style/status_circle_size"
+                                                android:scaleType="center"
+                                                android:src="@drawable/circle_status_in"
+                                                android:visibility="invisible" />
+
+                                        </FrameLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:gravity="center">
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent">
+
+                                            <ImageView
+                                                android:id="@+id/iv_status_agree_loan_out"
+                                                style="@style/status_circle_size"
+                                                android:scaleType="center"
+                                                android:src="@drawable/circle_status_out" />
+
+                                            <ImageView
+                                                android:id="@+id/iv_status_circle_agree_loan"
+                                                style="@style/status_circle_size"
+                                                android:scaleType="center"
+                                                android:src="@drawable/circle_status_in"
+                                                android:visibility="invisible" />
+
+                                        </FrameLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:gravity="center">
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent">
+
+                                            <ImageView
+                                                android:id="@+id/iv_status_circle_complete_out"
+                                                style="@style/status_circle_size"
+                                                android:scaleType="center"
+                                                android:src="@drawable/circle_status_out" />
+
+                                            <ImageView
+                                                android:id="@+id/iv_status_circle_complete"
+                                                style="@style/status_circle_size"
+                                                android:scaleType="center"
+                                                android:src="@drawable/circle_status_in"
+                                                android:visibility="invisible" />
+
+                                        </FrameLayout>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="40dp"
+                                    android:weightSum="120">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:gravity="center">
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:id="@+id/tv_status_bidding"
+                                                style="@style/font_small"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="입찰"
+                                                android:textStyle="" />
+
+                                        </FrameLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:gravity="center">
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:id="@+id/tv_status_select_auction"
+                                                style="@style/font_small"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="낙찰" />
+
+                                        </FrameLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:gravity="center">
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:id="@+id/tv_status_receipt_paper"
+                                                style="@style/font_small"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="서류\n접수" />
+
+                                        </FrameLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:gravity="center">
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:id="@+id/tv_status_check_paper"
+                                                style="@style/font_small"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="심사" />
+
+                                        </FrameLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:gravity="center">
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:id="@+id/tv_status_agree_loan"
+                                                style="@style/font_small"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="승인\n완료" />
+
+                                        </FrameLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="20"
+                                        android:gravity="center">
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:id="@+id/tv_status_complete"
+                                                style="@style/font_small"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="대출\n완료" />
+
+                                        </FrameLayout>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="#8F808080" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"
+                            android:minHeight="60dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/reg_detail_tv_left"
+                                android:layout_width="0dp"
+                                android:layout_weight="35"
+                                android:text="주소" />
+
+                            <TextView
+                                android:id="@+id/tv_reg_address"
+                                style="@style/reg_detail_tv_right"
+                                android:layout_width="0dp"
+                                android:layout_weight="65"
+                                android:breakStrategy="balanced"
+                                android:lineSpacingExtra="5dp"
+                                android:inputType="textMultiLine"
+                                android:scrollbars="vertical"
+                                android:text="인천 계양구 갈개언덕길 9 (작전동, 남진아파트) 202동 101호 1층" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="#8F808080" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:minHeight="60dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/reg_detail_tv_left"
+                                android:layout_width="0dp"
+                                android:layout_weight="35"
+                                android:text="최근 실거래가" />
+
+                            <TextView
+                                android:id="@+id/tv_latestDealPrice"
+                                style="@style/reg_detail_tv_right"
+                                android:layout_width="0dp"
+                                android:layout_weight="65"
+                                android:breakStrategy="balanced"
+                                android:inputType="textMultiLine"
+                                android:lineSpacingExtra="5dp"
+                                android:scrollbars="vertical"
+                                android:text="10,000만원 (2020-01-01 전용 71.848 m2 기준)" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="#8F808080" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:minHeight="60dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/reg_detail_tv_left"
+                                android:layout_width="0dp"
+                                android:layout_weight="40"
+                                android:text="공시지가" />
+
+                            <TextView
+                                android:id="@+id/tv_landPrice"
+                                style="@style/reg_detail_tv_right"
+                                android:layout_width="0dp"
+                                android:layout_weight="60"
+                                android:breakStrategy="balanced"
+                                android:inputType="textMultiLine"
+                                android:scrollbars="vertical"
+                                android:text="1,000,000원 " />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="#8F808080" />
+
+                        <LinearLayout
+                            style="@style/setting_linearlayout"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/reg_detail_tv_left"
+                                android:layout_width="0dp"
+                                android:layout_weight="40"
+                                android:text="희망대출금" />
+
+                            <TextView
+                                android:id="@+id/tv_reg_hope_loan_price"
+                                style="@style/reg_detail_tv_right"
+                                android:layout_width="0dp"
+                                android:layout_weight="60"
+                                android:text="8,000 만원"
+                                android:textColor="@color/pion_basic_soft_blue"
+                                android:textSize="17dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="#8F808080" />
+
+                        <LinearLayout
+                            android:layout_marginVertical="5dp"
+                            style="@style/setting_linearlayout"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/reg_detail_tv_left"
+                                android:layout_width="0dp"
+                                android:layout_weight="40"
+                                android:text="기존대출\n(근저당포함)" />
+
+                            <TextView
+                                android:id="@+id/tv_reg_pre_loan_price"
+                                style="@style/reg_detail_tv_right"
+                                android:layout_width="0dp"
+                                android:layout_weight="60"
+                                android:text="2,000 만원" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="#8F808080" />
+
+                        <LinearLayout
+                            style="@style/setting_linearlayout"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/reg_detail_tv_left"
+                                android:layout_width="0dp"
+                                android:layout_weight="40"
+                                android:text="세입자" />
+
+                            <TextView
+                                android:id="@+id/tv_reg_rent_info"
+                                style="@style/reg_detail_tv_right"
+                                android:layout_width="0dp"
+                                android:layout_weight="60"
+                                android:text="3,000 만원" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="#8F808080" />
+
+                        <LinearLayout
+                            style="@style/setting_linearlayout"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/reg_detail_tv_left"
+                                android:layout_width="0dp"
+                                android:layout_weight="40"
+                                android:text="소득형태" />
+
+                            <TextView
+                                android:id="@+id/tv_jobType"
+                                style="@style/reg_detail_tv_right"
+                                android:layout_width="0dp"
+                                android:layout_weight="60"
+                                android:text="직장인" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="#8F808080" />
+
+                        <LinearLayout
+                            style="@style/setting_linearlayout"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/reg_detail_tv_left"
+                                android:layout_width="0dp"
+                                android:layout_weight="40"
+                                android:text="확정플랫폼수수료" />
+
+                            <TextView
+                                android:id="@+id/tv_platformRate"
+                                style="@style/reg_detail_tv_right"
+                                android:layout_width="0dp"
+                                android:layout_weight="60"
+                                android:text="3.95" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/reg_info_detail_fragment_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <FrameLayout
+                        android:id="@+id/reg_info_detail_fragment_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ImageButton
+            android:id="@+id/btn_go_to_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:elevation="50dp"
+            android:padding="15dp"
+            android:src="@drawable/btn_go_to_top" />
+
+    </FrameLayout>
+
+
+</LinearLayout>

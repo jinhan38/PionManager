@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100"
+        tools:context=".RequestingManagerNum">
+
+        <TextView
+            style="@style/font_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="@string/request_manager_num"
+            android:textSize="@dimen/font_title_xx" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="@string/request_manager_num_3"
+            android:textSize="@dimen/font_title" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40">
+
+            <TextView
+                android:id="@+id/tv24"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circle_blue_big"
+                android:gravity="center"
+                android:text="24H"
+                android:textColor="@color/pion_basic_soft_blue"
+                android:textSize="50dp" />
+
+            <ProgressBar
+                android:id="@+id/circularProgressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="100"
+                android:progressDrawable="@drawable/progress_circle_very_small" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_weight="40"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/logout"
+                style="@style/btn_big"
+                android:layout_marginBottom="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_selector_blue"
+                android:letterSpacing="0.1"
+                android:text="@string/ok"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

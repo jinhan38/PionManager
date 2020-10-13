@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".Loading">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pion_basic_soft_blue">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/pion_main_logo_w" />
+
+        <ProgressBar
+            android:id="@+id/circularProgressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="100"
+            android:progressDrawable="@drawable/progress_circle_small"
+            android:secondaryProgress="100" />
+
+
+        <!--        scaleX -1로 넣으면 프로그레스의 시작 방향이 반대로 바뀜-->
+        <ProgressBar
+            android:id="@+id/circularProgressbar_2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="100"
+            android:progressDrawable="@drawable/progress_circle_big"
+            android:scaleX="-1"
+            android:secondaryProgress="100" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="148dp"
+            android:background="@color/pion_basic_soft_blue"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="for Manager"
+            android:textColor="@color/yellow"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/pion_tips"
+            style="@style/font_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="120dp"
+            android:text="tips"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="7dp"
+            android:gravity="right"
+            android:text="@string/version"
+            android:textColor="@android:color/white"
+            android:textSize="15dp" />
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <ImageButton
+                android:id="@+id/ibtn_back"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/arrow_left_black" />
+
+            <TextView
+                style="@style/font_big"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="60"
+                android:gravity="center|left"
+                android:text="@string/tv_setting" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="5dp">
+
+                <TextView
+                    style="@style/font_title_x"
+                    android:textColor="@color/pion_basic_soft_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="알림설정" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:layout_marginBottom="5dp"
+                android:background="#E0808080" />
+
+            <LinearLayout
+                style="@style/setting_linearlayout"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    style="@style/font_big"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="70"
+                    android:gravity="center|left"
+                    android:paddingStart="20dp"
+                    android:text="전체 푸시 알림"
+                    android:textColor="@color/button_basic_black" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30"
+                    android:orientation="vertical">
+
+                    <Switch
+                        android:id="@+id/toggle_push_all"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|right"
+                        android:theme="@style/SwitchTheme"
+                        android:layout_marginRight="10dp"
+                        android:checked="true"
+                        android:switchMinWidth="50dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="#2A808080" />
+
+            <LinearLayout
+                style="@style/setting_linearlayout"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    style="@style/font_big"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="70"
+                    android:gravity="center|left"
+                    android:paddingStart="20dp"
+                    android:text="경쟁입찰 알림"
+                    android:textColor="@color/button_basic_black" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30"
+                    android:orientation="vertical">
+
+                    <Switch
+                        android:id="@+id/toggle_push_auction"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:theme="@style/SwitchTheme"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="10dp"
+                        android:checked="true"
+                        android:switchMinWidth="50dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="#2A808080" />
+
+            <LinearLayout
+                style="@style/setting_linearlayout"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    style="@style/font_big"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="70"
+                    android:gravity="center|left"
+                    android:paddingStart="20dp"
+                    android:text="공지사항 알림"
+                    android:textColor="@color/button_basic_black" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30"
+                    android:orientation="vertical">
+
+                    <Switch
+                        android:id="@+id/toggle_push_notice"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|right"
+                        android:theme="@style/SwitchTheme"
+                        android:layout_marginRight="10dp"
+                        android:checked="true"
+                        android:switchMinWidth="50dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="#2A808080" />
+
+            <LinearLayout
+                style="@style/setting_linearlayout"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    style="@style/font_big"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="70"
+                    android:gravity="center|left"
+                    android:paddingStart="20dp"
+                    android:text="광고성정보 알림"
+                    android:textColor="@color/button_basic_black" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30"
+                    android:orientation="vertical">
+
+                    <Switch
+                        android:id="@+id/toggle_push_marketing"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|right"
+                        android:theme="@style/SwitchTheme"
+                        android:layout_marginRight="10dp"
+                        android:checked="true"
+                        android:switchMinWidth="50dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="#2A808080" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="5dp">
+
+
+                <TextView
+                    style="@style/font_title_x"
+                    android:textColor="@color/pion_basic_soft_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="회사정보" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:layout_marginBottom="5dp"
+                android:background="#E0808080" />
+
+
+            <LinearLayout
+                style="@style/setting_linearlayout_comInfo"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="35"
+                        android:gravity="bottom|left"
+                        android:paddingLeft="20dp"
+                        android:text="회사명"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        style="@style/font_title_xx"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="65"
+                        android:gravity="top|left"
+                        android:paddingStart="20dp"
+                        android:text="@string/com_name"
+                        android:textColor="@color/button_basic_black"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="#2A808080" />
+
+
+            <LinearLayout
+                style="@style/setting_linearlayout_comInfo"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="100">
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="45"
+                        android:gravity="bottom|left"
+                        android:paddingLeft="20dp"
+                        android:text="주소" />
+
+                    <TextView
+                        style="@style/font_big"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="55"
+                        android:gravity="top|left"
+                        android:paddingStart="20dp"
+                        android:text="@string/company_address"
+                        android:textColor="@color/button_basic_black"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="#2A808080" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="20dp"
+                    android:clickable="false"
+                    android:src="@drawable/arrow_right_black"
+                    tools:ignore="RtlHardcoded" />
+
+                <LinearLayout
+                    android:id="@+id/ll_home_page"
+                    style="@style/setting_linearlayout_comInfo"
+                    android:background="@drawable/btn_selector_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="100">
+
+                        <TextView
+                            style="@style/font_default"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="45"
+                            android:gravity="bottom|left"
+                            android:paddingLeft="20dp"
+                            android:text="홈페이지" />
+
+                        <TextView
+                            style="@style/font_big"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="55"
+                            android:gravity="top|left"
+                            android:paddingStart="20dp"
+                            android:text="@string/homePage"
+                            android:textColor="@color/button_basic_black"
+                            tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="#2A808080" />
+
+
+            <LinearLayout
+                style="@style/setting_linearlayout_comInfo"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="100">
+
+                    <TextView
+                        style="@style/font_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="45"
+                        android:gravity="bottom|left"
+                        android:paddingLeft="20dp"
+                        android:text="사업자등록번호" />
+
+                    <TextView
+                        style="@style/font_big"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="55"
+                        android:gravity="top|left"
+                        android:paddingStart="20dp"
+                        android:text="@string/company_registration_number"
+                        android:textColor="@color/button_basic_black"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="#2A808080" />
+
+
+            <LinearLayout
+                style="@style/setting_linearlayout_comInfo"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="100">
+
+                        <TextView
+                            style="@style/font_default"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="45"
+                            android:gravity="bottom|left"
+                            android:paddingLeft="20dp"
+                            android:text="고객센터" />
+
+                        <TextView
+                            style="@style/font_big"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="55"
+                            android:gravity="top|left"
+                            android:paddingStart="20dp"
+                            android:text="@string/company_phone_number"
+                            android:textColor="@color/button_basic_black"
+                            tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/ibton_call_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="10dp"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/circle_call_connect" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="#2A808080" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="5dp">
+
+                <TextView
+                    style="@style/font_title_x"
+                    android:textColor="@color/pion_basic_soft_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="약관" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="#E0808080" />
+
+            <LinearLayout
+                style="@style/setting_linearlayout"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|right"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1.1"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:src="@drawable/arrow_right_black" />
+
+                    <Button
+                        android:id="@+id/service_rule"
+                        style="@style/font_big"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/btn_selector_white"
+                        android:gravity="center|left"
+                        android:paddingStart="20dp"
+                        android:text="이용약관"
+                        android:textColor="@color/button_basic_black"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="#2A808080" />
+
+            <LinearLayout
+                style="@style/setting_linearlayout"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|right"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1.1"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:src="@drawable/arrow_right_black" />
+
+                    <Button
+                        android:id="@+id/privacy_rule"
+                        style="@style/font_big"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/btn_selector_white"
+                        android:gravity="center|left"
+                        android:paddingStart="20dp"
+                        android:text="개인정보 수집 및 이용안내"
+                        android:textColor="@color/button_basic_black"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="#2A808080" />
+
+            <LinearLayout
+                style="@style/setting_linearlayout"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|right"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1.1"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:src="@drawable/arrow_right_black" />
+
+                    <Button
+                        android:id="@+id/thirdPeople_rule"
+                        style="@style/font_big"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/btn_selector_white"
+                        android:gravity="center|left"
+                        android:paddingStart="20dp"
+                        android:text="개인정보의 제3자 제공"
+                        android:textColor="@color/button_basic_black"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="#2A808080" />
+
+            <LinearLayout
+                style="@style/setting_linearlayout"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|right"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1.1"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:src="@drawable/arrow_right_black" />
+
+                    <Button
+                        android:id="@+id/marketing_rule"
+                        style="@style/font_big"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/btn_selector_white"
+                        android:gravity="center|left"
+                        android:paddingStart="20dp"
+                        android:text="광고성 정보수신"
+                        android:textColor="@color/button_basic_black"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="#2A808080" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

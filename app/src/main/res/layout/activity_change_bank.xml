@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/basic_background"
+    android:weightSum="100"
+    tools:context=".Menu.MyInfo.ChangeBankInfo">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big"
+        android:background="@color/basic_background"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <ImageButton
+            android:id="@+id/ibtn_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="13"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/arrow_left_black" />
+
+        <TextView
+            android:layout_width="0dp"
+            style="@style/font_big"
+            android:background="@color/basic_background"
+            android:layout_height="match_parent"
+            android:layout_weight="60"
+            android:gravity="center|left"
+            android:text="계좌정보 변경" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/font_big"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:paddingStart="20dp"
+            android:text="@string/change_bank_coment" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <Spinner
+            android:id="@+id/spinner_bank"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="vertical"
+        android:weightSum="10"
+        tools:ignore="ExtraText">
+
+        <EditText
+            android:id="@+id/et_change_bank_num"
+            style="@style/EditTheme"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_big"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center|left"
+            android:hint="@string/register_page_bank_account_number"
+            android:inputType="number"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textSize="@dimen/font_big"
+            tools:ignore="NestedWeights,RtlHardcoded" />"
+
+        <TextView
+            android:id="@+id/tv_bank_num_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:singleLine="true"
+            android:text="계좌번호를 확인해주세요"
+            android:textColor="@color/my_red"
+            android:textSize="@dimen/font_default"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/et_change_bank_owner"
+            style="@style/EditTheme"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_big"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center|left"
+            android:hint="예금주"
+            android:inputType="textPersonName"
+            android:maxLength="11"
+            android:singleLine="true"
+            android:textSize="@dimen/font_big"
+            tools:ignore="NestedWeights,RtlHardcoded" />" />
+
+        <TextView
+            android:id="@+id/tv_bank_owner_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:singleLine="true"
+            android:text="예금주를 확인해주세요"
+            android:textColor="@color/my_red"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_big"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_change_bank"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:letterSpacing="0.1"
+            android:text="확인"
+            style="@style/font_big"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_back_click"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <ImageButton
+            android:id="@+id/ibtn_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="13"
+            android:background="@android:color/transparent"
+            android:src="@drawable/arrow_left_black" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="60"
+            android:background="@color/white"
+            android:gravity="center|left"
+            android:text="@string/tv_back"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:paddingLeft="20dp"
+        android:text="팀리스트"
+        android:textColor="@color/pion_basic_soft_blue"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#E0808080" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fm_no_Touch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/pion_basic_soft_blue"
+            android:visibility="gone" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ExpandableListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:childDivider="@android:color/black"
+                android:choiceMode="singleChoice"
+                android:dividerHeight="0.5dp"
+                android:groupIndicator="@android:color/transparent"
+                android:headerDividersEnabled="true"
+                android:scrollIndicators="right">
+
+
+            </ExpandableListView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_no_have_teamMember"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="팀원이 없습니다"
+                android:textSize="25dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="@string/teamMemberCircle"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/teamMemberIntroduce_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:breakStrategy="balanced"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:text="@string/teamMemberIntroduce_1"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="@string/teamMemberCircle"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/teamMemberIntroduce_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:breakStrategy="balanced"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:text="@string/teamMemberIntroduce_2"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="@string/teamMemberCircle"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/teamMemberIntroduce_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:breakStrategy="balanced"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:text="@string/teamMemberIntroduce_3"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/btn_member_invite_as_kakao"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@color/yellow"
+                    android:drawableLeft="@drawable/kakao_icon"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:text="카카오톡으로 팀원(매니저) 초대하기"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

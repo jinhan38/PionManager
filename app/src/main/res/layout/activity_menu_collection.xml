@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/basic_background">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/profile_icon"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:text="김진한"
+                android:textSize="@dimen/font_title_xx"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/profileImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnPrivacy"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/height_default"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/back_white_round"
+                android:elevation="30dp"
+                android:text="개인정보"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/tvName"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvGradeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="매니저님"
+                android:textSize="@dimen/font_title"
+                app:layout_constraintLeft_toRightOf="@+id/profileImage"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <View
+                android:id="@+id/viewBoundary"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="45dp"
+                android:background="@color/soft_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvGradeName" />
+
+            <LinearLayout
+                android:id="@+id/menuWrap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewBoundary">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/managerInviteWrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_selector_white">
+
+                    <ImageView
+                        android:id="@+id/iconManagerInvite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:src="@drawable/manager_invite_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textManagerInvite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/manager_invite"
+                        android:textSize="@dimen/font_title"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iconManagerInvite"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpUsage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/customerInviteWrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_selector_white">
+
+                    <ImageView
+                        android:id="@+id/iconCustomerInvite"
+                        android:layout_width="@dimen/menu_icon_size"
+                        android:layout_height="@dimen/menu_icon_size"
+                        android:layout_marginStart="30dp"
+                        android:src="@drawable/customer_invite_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textCustomerInvite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/menu_customer_invite"
+                        android:textSize="@dimen/font_title"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iconCustomerInvite"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpUsage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/teamListWrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_selector_white">
+
+                    <ImageView
+                        android:id="@+id/iconTeamList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:src="@drawable/manager_menu_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textTeamList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="추천인"
+                        android:textSize="@dimen/font_title"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iconTeamList"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpUsage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/customerWrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_selector_white">
+
+                    <ImageView
+                        android:id="@+id/iconCustomerList"
+                        android:layout_width="@dimen/menu_icon_size"
+                        android:layout_height="@dimen/menu_icon_size"
+                        android:layout_marginStart="30dp"
+                        android:src="@drawable/customer_menu_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textCustomerList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/tv_customerInfo"
+                        android:textSize="@dimen/font_title"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iconCustomerList"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpUsage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/boardWrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_selector_white">
+
+                    <ImageView
+                        android:id="@+id/iconBoard"
+                        android:layout_width="@dimen/menu_icon_size"
+                        android:layout_height="@dimen/menu_icon_size"
+                        android:layout_marginStart="30dp"
+                        android:src="@drawable/board_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textBoard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/tv_notice_board"
+                        android:textSize="@dimen/font_title"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iconBoard"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpUsage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/faqWrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_selector_white">
+
+                    <ImageView
+                        android:id="@+id/iconFAQ"
+                        android:layout_width="@dimen/menu_icon_size"
+                        android:layout_height="@dimen/menu_icon_size"
+                        android:layout_marginStart="30dp"
+                        android:src="@drawable/faq_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textFAQ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/tv_faq"
+                        android:textSize="@dimen/font_title"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iconFAQ"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpUsage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/analysticWrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_selector_white">
+
+                    <ImageView
+                        android:id="@+id/iconAnalystic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:src="@drawable/analystics_menu_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textAnalystic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/tv_analystic"
+                        android:textSize="@dimen/font_title"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iconAnalystic"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpUsage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/WhatIsManagerWrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_selector_white">
+
+                    <ImageView
+                        android:id="@+id/iconWhatIsManager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:src="@drawable/menu_manager_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textWhatIsManager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/what_is_manager"
+                        android:textSize="@dimen/font_title"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iconWhatIsManager"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpUsage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/commissionExplainWrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_selector_white">
+
+                    <ImageView
+                        android:id="@+id/iconCommissionExplain"
+                        android:layout_width="@dimen/menu_icon_size"
+                        android:layout_height="@dimen/menu_icon_size"
+                        android:layout_marginStart="30dp"
+                        android:src="@drawable/pig_bank"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textCommissionExplain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/commision_for_manager"
+                        android:textSize="@dimen/font_title"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/iconCommissionExplain"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpUsage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menuWrap">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/pion_basic_deep_blue"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="Financial Partnership"
+                    android:textSize="@dimen/font_title_xx" />
+
+                <View
+                    android:id="@+id/viewBoundaryBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/soft_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvGradeName" />
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:stretchColumns="0,1,2">
+
+                    <TableRow>
+
+                        <ImageView
+                            style="@style/financail_partner"
+                            android:src="@drawable/together" />
+
+                        <ImageView
+                            style="@style/financail_partner"
+                            android:src="@drawable/midrate" />
+
+                        <ImageView
+                            style="@style/financail_partner"
+                            android:src="@drawable/y" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <ImageView
+                            style="@style/financail_partner"
+                            android:src="@drawable/daily" />
+
+                        <ImageView
+                            style="@style/financail_partner"
+                            android:src="@drawable/people" />
+
+                        <ImageView
+                            style="@style/financail_partner"
+                            android:src="@drawable/rending" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <ImageView
+                            style="@style/financail_partner"
+                            android:src="@drawable/eightpercent" />
+
+                        <ImageView
+                            style="@style/financail_partner"
+                            android:src="@drawable/daon" />
+
+                        <ImageView
+                            style="@style/financail_partner"
+                            android:src="@drawable/cocktail" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

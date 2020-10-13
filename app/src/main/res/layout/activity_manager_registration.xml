@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/basic_background"
+        android:orientation="vertical"
+        tools:context=".ManagerRegistration">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <TextView
+                style="@style/font_title_xx"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="@string/lincense_apply"
+                android:textColor="@color/pion_basic_soft_blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="15"
+                android:breakStrategy="balanced"
+                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:lineSpacingExtra="5dp"
+                android:paddingHorizontal="30dp"
+                android:text="@string/manager_registration"
+                android:textSize="@dimen/font_title_x"
+                tools:ignore="TextViewEdits" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40">
+
+                <TextView
+                    android:id="@+id/tv24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circle_blue_big"
+                    android:gravity="center"
+                    android:text="24H"
+                    android:textColor="@color/pion_basic_soft_blue"
+                    android:textSize="50dp" />
+
+                <ProgressBar
+                    android:id="@+id/circularProgressbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/progress_circle_very_small" />
+
+            </FrameLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:breakStrategy="balanced"
+                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:text="@string/request_manager_num_3"
+                android:textSize="@dimen/font_big"
+                tools:ignore="TextViewEdits" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="25"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:paddingHorizontal="40dp">
+
+                <Button
+                    android:id="@+id/btManagerRegistration"
+                    style="@style/btn_big"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_big"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/btn_selector_blue"
+                    android:letterSpacing="0.05"
+                    android:text="라이선스 신청하기"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

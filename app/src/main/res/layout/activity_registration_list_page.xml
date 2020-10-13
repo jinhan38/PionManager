@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/basic_background"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/llRegListSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/basic_background"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/tvRegStatus"
+                        style="@style/font_title_xx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:text="@string/move_to_registration"
+                        android:textColor="@color/pion_basic_soft_blue" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_default"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/text_line_blue"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/etListSearch"
+                        style="@style/EditTheme_search"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="80"
+                        android:background="@null"
+                        android:hint="고객명으로 검색하세요"
+                        android:imeOptions="actionSearch"
+                        android:paddingLeft="15dp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/font_big"
+                        tools:ignore="RtlHardcoded,SpUsage" />
+
+                    <ImageButton
+                        android:id="@+id/ibtn_delete"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/close_gray"
+                        android:visibility="invisible" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/ibtn_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/pion_basic_soft_blue"
+                            android:src="@drawable/search_btn_w" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/FLNoTouch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabFilterAll"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="21dp"
+                android:layout_marginBottom="205dp"
+                android:backgroundTint="@color/white"
+                android:elevation="20dp"
+                android:visibility="gone"
+                app:borderWidth="0dp"
+                app:fabSize="mini"
+                app:pressedTranslationZ="10dp"
+                tools:visibility="visible" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabFilterCanceled"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="21dp"
+                android:layout_marginBottom="160dp"
+                android:backgroundTint="@color/my_red_light"
+                android:elevation="20dp"
+                android:visibility="gone"
+                app:borderWidth="0dp"
+                app:fabSize="mini"
+                app:pressedTranslationZ="10dp"
+                tools:visibility="visible" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabFilterIng"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="21dp"
+                android:layout_marginBottom="115dp"
+                android:backgroundTint="@color/pion_basic_status_blue"
+                android:elevation="20dp"
+                android:visibility="gone"
+                app:borderWidth="0dp"
+                app:fabSize="mini"
+                app:pressedTranslationZ="10dp"
+                tools:visibility="visible" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabFilterFinished"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="21dp"
+                android:layout_marginBottom="70dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:backgroundTint="@color/my_green"
+                android:elevation="20dp"
+                android:visibility="gone"
+                app:borderWidth="0dp"
+                app:fabSize="mini"
+                app:pressedTranslationZ="10dp"
+                tools:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/fabListViewFilterFirst"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/ripple_oval_white"
+                android:elevation="5dp"
+                android:src="@drawable/set_filter_icon" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/pion_basic_soft_blue" />
+
+            <LinearLayout
+                android:id="@+id/llRecyclerviewWrap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:visibility="gone">
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swipeRefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollIndicators="right"
+                        android:scrollbarSize="5dp"
+                        android:scrollbars="vertical"
+                        tools:ignore="TooDeepLayout" />
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressPaging"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:indeterminateTint="@color/pion_basic_soft_blue"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/noHaveRegistration"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="120dp"
+                    android:gravity="center"
+                    android:text="경쟁입찰 내역이 없습니다"
+                    android:textSize="22dp" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="70dp"
+                    android:src="@drawable/no_registration" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/registrationIntroduce2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:breakStrategy="balanced"
+                        android:gravity="center"
+                        android:inputType="textMultiLine"
+                        android:lineSpacingExtra="4dp"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="20dp"
+                        android:text="@string/registrationIntroduce_2"
+                        android:textSize="@dimen/font_big" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/flFab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#A8808080"
+                android:visibility="gone"
+                tools:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvFabAll"
+                    style="@style/fab_filter_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="206dp"
+                    android:gravity="right"
+                    android:text="전체"
+                    android:textSize="@dimen/font_big" />
+
+                <TextView
+                    android:id="@+id/tvFabCancel"
+                    style="@style/fab_filter_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="161dp"
+                    android:gravity="right"
+                    android:text="취소"
+                    android:textSize="@dimen/font_big" />
+
+                <TextView
+                    android:id="@+id/tvFabIng"
+                    style="@style/fab_filter_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="116dp"
+                    android:gravity="right"
+                    android:text="진행"
+                    android:textSize="@dimen/font_big" />
+
+                <TextView
+                    android:id="@+id/tvFabFinish"
+                    style="@style/fab_filter_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="71dp"
+                    android:gravity="right"
+                    android:text="완료"
+                    android:textSize="@dimen/font_big" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+
+    </FrameLayout>
+
+</layout>

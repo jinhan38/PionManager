@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Intro">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <ImageView style="@style/top_logo" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_mw"
+        style="@style/font_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:drawablePadding="10dp"
+        android:text="@string/intro_mw" />
+
+    <TextView
+        style="@style/font_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="35dp"
+        android:text="@string/intro_mw_content" />
+
+    <TextView
+        android:id="@+id/tv_mn"
+        style="@style/font_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="5dp"
+        android:drawablePadding="10dp"
+        android:text="@string/intro_mn" />
+
+    <TextView
+        style="@style/font_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="35dp"
+        android:text="@string/intro_ma_content" />
+
+    <TextView
+        android:id="@+id/tv_manager_app"
+        style="@style/font_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="5dp"
+        android:drawablePadding="10dp"
+        android:text="@string/intro_ma" />
+
+    <TextView
+        style="@style/font_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="35dp"
+        android:text="고객 체결 리스트, 수수료 수익 등 각종 현황을 한눈에볼 수 있으며 고객의 대출 진행과정(미비서류 등)을 실시간으로 확인할 수 있으므로 수수료를 안전하게 지급받을 수 있습니다." />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/ch_forever_close"
+                style="@style/font_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:text="@string/forever_close"
+                android:textColor="@color/basic_gray" />
+
+
+
+                <Button
+                    android:id="@+id/bt_close"
+                    style="@style/btn_small"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/height_small"
+                    android:layout_width="@dimen/width_small"
+                    android:layout_marginRight="35dp"
+                    android:background="@drawable/btn_selector_blue"
+                    android:gravity="center"
+                    android:text="@string/close" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

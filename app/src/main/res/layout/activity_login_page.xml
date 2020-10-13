@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginPage">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp">
+
+        <ProgressBar
+            android:id="@+id/match_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:indeterminateTint="@color/pion_basic_soft_blue"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:letterSpacing="0.05"
+                    android:text="@string/com_name"
+                    android:textColor="@color/pion_basic_soft_blue"
+                    android:textSize="55dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="금융을 쇼핑하다"
+                    android:textColor="@color/pion_basic_soft_blue"
+                    android:textSize="15dp" />
+
+                <!--                <ImageView-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:src="@drawable/icon_login" />-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/et_id_login"
+                    style="@style/EditTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_big"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/text_line"
+                    android:hint="E-mail 형식의 아이디"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="15dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_big" />
+
+                <TextView
+                    android:id="@+id/tv_err_login_id"
+                    style="@style/EditTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/error_text_id"
+                    android:textColor="@color/my_red"
+                    tools:visibility="visible"
+                    android:textSize="@dimen/font_big"
+                    android:visibility="gone" />
+
+
+                <EditText
+                    android:id="@+id/et_pw_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_big"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/text_line"
+                    android:hint="패스워드"
+                    android:inputType="textPassword"
+                    android:paddingLeft="15dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_default" />
+
+                <TextView
+                    android:id="@+id/tv_err_login_pw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/error_text_pw"
+                    android:textColor="@color/my_red"
+                    android:paddingLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    android:textSize="@dimen/font_default"
+                    tools:visibility="visible"
+                    android:visibility="gone" />
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_big"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/back_blue_round_all">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="@style/progressBar" />
+
+                    <Button
+                        android:id="@+id/bt_login"
+                        style="@style/btn_big"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:text="로그인"
+                        android:textColor="@android:color/white" />
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/cb_login_keep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 자동 로그인"
+                        android:textColor="@color/basic_gray"
+                        android:textSize="@dimen/font_default" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bt_register_login_page"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:text="@string/registration"
+                    android:textColor="@color/basic_gray"
+                    android:textSize="@dimen/font_default" />
+
+
+                <Button
+                    android:id="@+id/btn_find_id_pw"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="25dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:text="@string/find_idAndPassword"
+                    android:textColor="@color/basic_gray"
+                    android:textSize="@dimen/font_default" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+</ScrollView>

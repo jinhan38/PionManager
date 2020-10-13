@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bank_array">
+
+        <item>은행선택</item>
+        <item>신한</item>
+        <item>국민</item>
+        <item>농협</item>
+        <item>우리</item>
+        <item>하나</item>
+        <item>KEB하나</item>
+        <item>외환</item>
+        <item>기업</item>
+        <item>우체국</item>
+        <item>SC</item>
+        <item>수협</item>
+        <item>BNP파리바</item>
+        <item>산업</item>
+        <item>도이치</item>
+        <item>저축은행</item>
+        <item>신형</item>
+        <item>지역농.축협</item>
+        <item>새마을</item>
+        <item>경남</item>
+        <item>전북</item>
+        <item>광주</item>
+        <item>부산</item>
+        <item>대구</item>
+        <item>HSBC</item>
+        <item>JP모간</item>
+        <item>BOA</item>
+        <item>산림조합</item>
+        <item>중국공상</item>
+        <item>케이뱅크</item>
+        <item>카카오뱅크</item>
+        <item>한국씨티</item>
+        <item>중국건설</item>
+        <item>국세</item>
+        <item>제주</item>
+    </string-array>
+    
+</resources>

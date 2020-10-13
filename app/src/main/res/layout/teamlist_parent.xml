@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_teamList_parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_listView"
+        android:background="@drawable/button_ripple_effect"
+        android:orientation="horizontal"
+        android:paddingRight="10dp"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/list_parent_name"
+            style="@style/font_big"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|left"
+            android:layout_weight="30"
+            android:gravity="center"
+            tools:ignore="RtlHardcoded" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:gravity="center|right"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="30">
+
+
+                <ImageButton
+                    android:id="@+id/arrow_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/arrow_top"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="center"
+                    android:visibility="visible" />
+
+
+                <ImageButton
+                    android:id="@+id/arrow_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/arrow_bottom"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="center"
+                    android:visibility="visible" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_dot"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layerType="software"
+        android:src="@drawable/dash_line_blue"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_body"
+            android:background="@color/expandable_child_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <LinearLayout
+                android:id="@+id/ll_child_top"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/teamList_child_thisMonth"
+                    style="@style/font_big"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="40"
+                    android:gravity="center|left"
+                    android:text="이번달 대출금액" />
+
+                <TextView
+                    android:id="@+id/teamList_child_totalPrice"
+                    style="@style/font_big"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:gravity="center|right"
+                    android:text="100,000,000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_child_middle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    style="@style/font_big"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="40"
+                    android:gravity="center|left"
+                    android:text="이번달 완료건수" />
+
+                <TextView
+                    android:id="@+id/teamList_child_finishNum"
+                    style="@style/font_big"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:gravity="center|right"
+                    android:text="2건" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    style="@style/font_big"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="40"
+                    android:gravity="center|left"
+                    android:text="@string/registerDate" />
+
+                <TextView
+                    android:id="@+id/teamList_child_registerDate"
+                    style="@style/font_big"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:gravity="center|right"
+                    android:text="2020-10-01" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_big"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    style="@style/font_big"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="40"
+                    android:gravity="center|left"
+                    android:text="@string/recommendationDate" />
+
+                <TextView
+                    android:id="@+id/teamList_child_recommendationDate"
+                    style="@style/font_big"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:gravity="center|right"
+                    android:text="2020-12-01" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#70808080" />
+
+    </LinearLayout>
+
+</LinearLayout>
